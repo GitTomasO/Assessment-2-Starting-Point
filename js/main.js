@@ -9,6 +9,7 @@ const btnDelete= document.getElementById('btn-delete')
 btn.addEventListener('click', callRandomAdviceAPI,) // Adds an event listener to the window that detects the click event
 const adviceSlip = document.querySelector('.advices')
 
+
 //Call to the API and get a random advice
 async function callRandomAdviceAPI() {
     //Try and run the following code
@@ -29,13 +30,15 @@ async function callRandomAdviceAPI() {
     function displayRandomAdvice(data){
         adviceSlip.innerText=data.slip.advice
         console.log(adviceSlip.innerHTML);
+        adviceSlip.classList.add('animate__animated','animate__backInDown')
     }  
 
     // Assign Favorite quote 
-   btnFav.addEventListener('click', saveFavoriteQuote,) //adding an event listener to our variable, calling a function
+   btnFav.addEventListener('click', saveFavoriteQuote, ) //adding an event listener to our variable, calling a function
 function saveFavoriteQuote(){ 
     
 addRow(adviceSlip.innerHTML, btnDelete)//calling addRow(), adding a piece of Json info
+
 }
     
 
@@ -68,25 +71,31 @@ function addRow(quote, DeleteFavoriteQuote){
 
     // append row to table body
     table.appendChild(row)
+    row.classList.add('animate__animated','animate__backInDown')// added drop down animation 
 }
-const testBtn = document.getElementById("test-btn")
-testBtn.addEventListener("click", addRow)
+
+
 
 
 const table = document.querySelector('.table')
 table.addEventListener("click", removeItem)
+table.classList.add('animate__animated','animate__backInUp')
 
 // Remove item
 function removeItem(e) {
-  if (e.target.classList.contains('delete')) {//add a btn with a 'delete' text, with same functionality
+  if (e.target.classList.contains('delete')) {//search for a btn that contains the class 'delete'
     if (confirm('Are You Sure?')) {
       //* This variable stores an object data type
        
       var quote = e.target.parentElement.parentElement;
       table.removeChild(quote);
+      e.classList.add('animate__animated','animate__backInUp')
+      row.classList.add('animate__animated','animate_backInUp')
     }
   }
 }
+
+
 
     
 
