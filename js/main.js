@@ -78,7 +78,7 @@ table.addEventListener("click", removeItem)
 
 // Remove item
 function removeItem(e) {
-  if (e.target.classList.contains('delete')) {
+  if (e.target.classList.contains('delete')) {//add a btn with a 'delete' text, with same functionality
     if (confirm('Are You Sure?')) {
       //* This variable stores an object data type
        
