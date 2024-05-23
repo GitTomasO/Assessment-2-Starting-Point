@@ -1,0 +1,64 @@
+.display {
+    width: 100%;
+    padding: 10px 0 0 0;
+    text-align: center;
+}
+.head  {
+    background-image:url() ;
+}
+*{
+    background-color: rgb(227, 128, 7);
+}
+
+#facts {
+    width: 100%;
+    padding: 20px;
+    text-align: justify;
+    text-align-last: left;
+}
+.btn{
+    text-align: center;
+}
+img{
+    width: max-content;
+    float: left;
+    display: none;
+}
+p{
+    text-align: center;
+}
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    width: 300px;
+    border-radius: 5px;
+    padding: 20px;
+    border: 1px solid #ccc; 
+    text-align: center;
+  }
+
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .container {
+    padding: 2px 16px;
+  }
+  table{
+    border: solid 3px;
+  }
+ th{
+    column-span: 2;
+    text-align: center;
+ }
+ tr{
+    border: solid 3px;
+    columns: solid 3px;
+    padding: solid 3px;
+
+ }
+ td{
+    border-right: solid 3px;
+    padding: 0.5rem ;
+ }
+
